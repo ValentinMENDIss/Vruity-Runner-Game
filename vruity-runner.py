@@ -188,21 +188,7 @@ def main():                                                                 # Ma
     cactus = Cactus()                                                       # Create New Variable ( to set up a Cactus ) which is class of Cactus
     
     
-    # CODE (MAIN LOOP)
-    '''
-    x_pos_background = 0
-    y_pos_background = 0
-    
-    def background():
-        global x_pos_background, y_pos_background
-        image_width = BACKGROUND.get_width()
-        SCREEN.blit(BACKGROUND, (x_pos_background, y_pos_background))
-        if x_pos_background < -image_width: # When Image is ended: blit(draw) an image
-            SCREEN.blit(BACKGROUND, image_width + x_pos_background, y_pos_background)
-            x_pos_background = 0
-        x_pos_background -= game_speed
-    '''     
-    
+    # CODE (MAIN LOOP):
     
     def score():                                                                                        # Function (def) for score ( Getting Points / Score for the run )
         global coins, game_speed                                                                        # Take Global Varibles ... ( which are located at main loop )
@@ -240,10 +226,6 @@ def main():                                                                 # Ma
         cactus.update()                                     # Refreshing Frames / Updating Motion of the Cloud
         #####################       
 
-
-        '''
-        background()
-        '''
         
         score()                                             # Run Score Function (def)
 
@@ -254,9 +236,6 @@ def main():                                                                 # Ma
             death_count += 1                                       # 1 is added to the Death Count
             menu(death_count)                                      # Open Menu() with number of deaths, is needed to say if the menu started on the game bootup or is it because of collision with an object
                                                                    # Which would start ( Main Menu ) or ( Retry Menu )       
-
-        
-        
 
         
         
